@@ -1,23 +1,23 @@
 #include <stdio.h>
 
+/*
+first XOR second = first XOR second
+--
+second = (first XOR second) XOR second
+therefore second =  first XOR (second XOR second)
+therefore second = first XOR 0000.. = first
+--
+first = (first XOR second) XOR (first)
+...same logic as before
+first = second
+********************************
+
+anything XOR itself is 00000...
+anything XOR 00000... is itself
+*/
+
 void swap(int *first, int *second)
 {
-  /*
-  first XOR second = first XOR second
-  --
-  second = (first XOR second) XOR second
-  therefore second =  first XOR (second XOR second)
-  therefore second = first XOR 0000.. = first
-  --
-  first = (first XOR second) XOR (first)
-  ...same logic as before
-  first = second
-  ********************************
-
-  anything XOR itself is 00000...
-  anything XOR 0000... is itself
-  */
-
   *first = *first^*second;
   *second = *first^*second;
   *first = *first^*second;
