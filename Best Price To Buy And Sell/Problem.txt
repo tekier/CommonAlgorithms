@@ -1,0 +1,9 @@
+Given an array of integers like this one:
+
+array = [4,5,3,1,8,6,4,3,9]
+
+Find x[j] and x[i] such that j > i
+And x[j] - x[i] is maximum for x[j] and x[i] in the array
+
+ie The index is the day number and the content of the index is
+the price of stock on that day. Find the highest possible profit that can be made.
